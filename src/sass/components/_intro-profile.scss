@@ -1,0 +1,338 @@
+.profile {
+  display: flex;
+  background-color: $cover-color;
+
+  &__intro {
+    background-color: white;
+    border: $border-color solid 0.1rem;
+    width: 79rem;
+    height: 46rem;
+    margin-top: 4.8rem;
+    &__cover {
+      width: 78.8rem;
+      height: 20rem;
+    }
+    &__picture {
+      position: absolute;
+      top: 20rem;
+      left: 22rem;
+      border: $cover-color solid 0.5rem;
+      background-image: url("../../assets/personal.jpg");
+      width: 16rem;
+      height: 16rem;
+      border-radius: 50%;
+    }
+    &__addbtn {
+      position: relative;
+      top: 2rem;
+      left: 46rem;
+      width: 18rem;
+      height: 3rem;
+      background-color: $blue;
+      color: white;
+      text-align: center;
+      padding: 0.5rem;
+
+      &:hover {
+        background-color: $darkblue;
+        cursor: pointer;
+      }
+    }
+    &__morebtn {
+      color: grey;
+      position: relative;
+      width: 7rem;
+      height: 3rem;
+      top: -1rem;
+      left: 65rem;
+      text-align: center;
+      padding: 0.5rem;
+      border: black solid 0.1rem;
+      &:hover {
+        border: black solid 0.2rem;
+        color: black;
+        background-color: $cover-color;
+        cursor: pointer;
+      }
+    }
+    &__pen {
+      position: relative;
+      bottom: 4.4rem;
+      left: 73rem;
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+      padding: 1rem;
+      &:hover {
+        background-color: #e5f5fc;
+        cursor: pointer;
+      }
+    }
+    &__name {
+      font-size: 2.5rem;
+      font-weight: 400;
+      position: absolute;
+      top: 36rem;
+      left: 22rem;
+    }
+    &__jobtitle {
+      font-size: 1.8rem;
+      font-weight: 400;
+      position: absolute;
+      left: 22rem;
+      top: 39.7rem;
+      font-style: bold;
+      color: black;
+    }
+    &__country {
+      font-size: 1.6rem;
+      font-weight: 400;
+      position: absolute;
+      left: 22rem;
+      top: 42.5rem;
+      font-style: bold;
+      color: black;
+    }
+    &__connections {
+      font-size: 1.6rem;
+      font-weight: 600;
+      position: absolute;
+      left: 28rem;
+      top: 42.5rem;
+      font-style: bold;
+      color: $blue;
+      &:hover {
+        cursor: pointer;
+        color: $darkblue;
+      }
+    }
+    &__contactInfo {
+      font-size: 1.6rem;
+      font-weight: 600;
+      position: absolute;
+      left: 41rem;
+      top: 42.5rem;
+      font-style: bold;
+      color: $blue;
+      &:hover {
+        cursor: pointer;
+        color: $darkblue;
+      }
+    }
+    &__iti {
+      width: 23rem;
+      height: 4rem;
+      position: relative;
+      left: 53.5rem;
+      bottom: 3.5rem;
+      cursor: pointer;
+      &__logo {
+        margin-top: 0.9rem;
+      }
+
+      &__txt {
+        width: 20rem;
+        font-weight: 600;
+        position: absolute;
+        left: 4rem;
+        top: -0.5rem;
+        color: rgb(80, 70, 70);
+        font-size: 1.6rem;
+        font-style: bold;
+      }
+    }
+    &__uni {
+      width: 23rem;
+      height: 4rem;
+      position: relative;
+      left: 53.5rem;
+      bottom: 3.5rem;
+      cursor: pointer;
+      &__logo {
+        margin-top: 0.9rem;
+      }
+      &__txt {
+        color: rgb(80, 70, 70);
+        font-size: 1.6rem;
+        font-weight: 600;
+        font-style: bold;
+        position: absolute;
+        left: 4rem;
+        top: 0.8rem;
+        &:hover {
+          text-decoration: underline;
+          color: $blue;
+        }
+      }
+    }
+
+    &__box {
+      border: lightgray 2px dashed;
+      width: 74rem;
+      height: 6.5rem;
+      position: relative;
+      bottom: 2rem;
+      left: 2rem;
+      padding: 1rem;
+      &__txt {
+        font-size: 1.4rem;
+        color: $txt-color;
+      }
+      &__close {
+        position: absolute;
+        right: 0rem;
+        top: 0rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.7rem;
+
+        border-radius: 50%;
+        &:hover {
+          background-color: $cover-color;
+        }
+      }
+      &__getStarted {
+        font-size: 1.6rem;
+        font-weight: 600;
+        font-style: bold;
+        color: $blue;
+        position: relative;
+        bottom: 1rem;
+
+        &:hover {
+          color: $darkblue;
+          text-decoration: underline;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__about {
+      background-color: white;
+      border: $border-color solid 0.1rem;
+      left: rem;
+      width: 79rem;
+      height: 11.5rem;
+      margin: 2.5rem 0;
+      padding: 2rem;
+      &__title {
+        font-size: 2.5rem;
+        font-weight: 400;
+      }
+      &__jobtitle {
+        font-size: 1.4rem;
+      }
+      &__pen {
+        position: relative;
+        bottom: 7.5rem;
+        left: 71rem;
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        padding: 1rem;
+        &:hover {
+          background-color: #e5f5fc;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__featured {
+      background-color: white;
+      border: $border-color solid 0.1rem;
+      left: rem;
+      width: 79rem;
+      height: 16.5rem;
+      margin: 2.5rem 0;
+      padding: 2rem;
+      &__title {
+        font-size: 2.5rem;
+        font-weight: 400;
+      }
+      &__box {
+        border: lightgray 2px dashed;
+        width: 74rem;
+        height: 6.5rem;
+        position: relative;
+        // bottom: 0rem;
+        top: 1rem;
+        padding: 1rem;
+        &__txt {
+          font-size: 1.4rem;
+          color: $txt-color;
+        }
+        &__close {
+          position: absolute;
+          right: 0rem;
+          top: 0rem;
+          width: 3rem;
+          height: 3rem;
+          text-align: center;
+          padding: 0.7rem;
+
+          border-radius: 50%;
+          &:hover {
+            background-color: $cover-color;
+          }
+        }
+        &__getStarted {
+          font-size: 1.6rem;
+          font-weight: 600;
+          font-style: bold;
+          color: $blue;
+          position: relative;
+          bottom: 1rem;
+
+          &:hover {
+            color: $darkblue;
+            text-decoration: underline;
+          }
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__rightSection {
+    margin: 5rem 2rem;
+    color: $txt-color;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0;
+    &__con {
+      height: 4rem;
+      &__txt {
+        display: inline-block;
+        position: relative;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &__mark {
+        position: absolute;
+        left: 27rem;
+      }
+    }
+
+    &__card {
+      border: $border-color solid 0.1rem;
+      width: 31.9rem;
+      height: 27rem;
+
+      &__img {
+        border: 0.8rem solid white;
+      }
+    }
+
+    &__peopleAlsoViewed {
+      color: $txt-color;
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin: 1.5rem 0rem;
+    }
+  }
+}

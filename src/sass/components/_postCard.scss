@@ -1,0 +1,107 @@
+.PostsArea {
+  width: 100%;
+}
+.postContainer {
+  box-shadow: 2px 5px 15px 5px #efe6e6;
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 3em;
+  max-width: 100%;
+  position: relative;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+
+  &__line {
+    
+  }
+
+  &__blog-entry {
+    display: flex;
+  }
+  &__text {
+    width: calc(100% - 150px);
+    padding-left: 1.5rem !important;
+    &__title {
+      font-size: $title-font-size;
+      line-height: 1.5;
+    }
+
+    &__details {
+      @include marpad-words;
+      font-size: $subtitle-font-size;
+
+      
+    }
+    &__blog {
+      @include marpad-words;
+      font-size: 15px;
+      display: -webkit-box;
+    }
+  }
+
+  &__img {
+    display: block;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__comment {
+      height: 4rem;
+      width: 4rem;
+      margin: 0.5rem;
+    }
+  }
+
+  &__form {
+  }
+
+  &__like-comment-icon {
+    .fa {
+      // color: rebeccapurple;
+      margin: 0rem 2rem 0rem 3rem;
+    }
+  }
+  &__like-details{
+    margin: 0rem 2rem 0rem 3rem;
+
+    // background-color: rgb(158, 146, 170);
+    font-size: 1.2rem ;
+    // span{margin: .5rem ;}
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.comment-area {
+  border-radius: 1rem;
+  
+  // @include marpad-words;
+}
+.col-1 {
+  padding-left: 35px;
+}
+.c {
+  height: 1rem;
+}
+.fa {
+  cursor: pointer;
+}
+.old-comment {
+  font-size: 1.2rem;
+  background-color: rgba(rebeccapurple, 0.2);
+  border-radius: 0rem 1rem 1rem 1rem;
+  padding: .5rem;
+  padding-left: 1.5rem;
+
+}
+.context-menu-cursor{
+ cursor: context-menu;
+}

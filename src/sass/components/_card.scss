@@ -1,0 +1,80 @@
+// .card {
+//   color: $primary-color;
+// @include mp;
+
+//   &-img-top {
+//   }
+
+//   &-body {
+
+//     &-title {
+
+//     }
+//   }
+
+//   &-btn {
+//   }
+// }
+.PostsArea{
+  width: 100%;
+  position: absolute;
+}
+.postContainer {
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 5px 8px #efe6e6;
+    
+position: relative;
+    border-radius: 10px;
+    // background-color: red;
+  width: 95%;
+  margin-bottom: 3em;
+  
+
+  max-width: 100%;
+  position: relative;
+  padding-right: 1rem;
+  padding-left: 1rem;
+ 
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+  &__blog-entry {
+    display: flex;
+  }
+  &__text {
+    width: calc(100% - 150px);
+    padding-left: 1.5rem !important;
+    &__title {
+      font-size: $title-font-size;
+      line-height: 1.5;
+    }
+
+    &__details {
+      @include marpad-words;
+      font-size: $subtitle-font-size;
+    }
+    &__blog {
+      @include marpad-words;
+      font-size: 15px;
+      display: -webkit-box;
+    }
+  }
+
+  &__img {
+    display: block;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.fa {
+  font-size: 20px;
+}

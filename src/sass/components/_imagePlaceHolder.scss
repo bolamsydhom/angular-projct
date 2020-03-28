@@ -1,0 +1,15 @@
+.avatar {
+    vertical-align: middle;
+    border-radius: 50%;
+
+    &--post {
+        width: 5rem;
+        height: 5rem;
+
+    }
+
+    &--profile {
+        width: 15rem;
+        height: 15rem;
+    }
+}

@@ -1,0 +1,33 @@
+.youMayKnow {
+  margin-top: 2rem;
+  height: 7rem;
+  &__img {
+    display: inline-block;
+    background-image: url("../../assets/personal-chat.jpg");
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: black;
+    position: relative;
+    bottom: 4rem;
+    left: 1rem;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      color: $blue;
+    }
+  }
+  &__jobtitle {
+    color: $txt-color;
+    font-size: 1.4rem;
+    color: $txt-color;
+    position: relative;
+    bottom: 4rem;
+    left: 6.5rem;
+  }
+}
