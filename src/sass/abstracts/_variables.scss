@@ -8,3 +8,30 @@ $border-color: #c0c0c0;
 $darkblue:#006097;
 $blue:rgb(33, 123, 172);
 $txt-color:#3d3b3b;
+
+
+$color-dark-gray:#3d3b3b;
+$color-transparent: white;
+$color-primary-btn: #283e4a;
+$color-background-hover: #0c1f29;
+$color-light-gray: #c5cfd6;
+
+
+$primary-font-family: open sans-serif;
+$secondery-font-family: "Poppins", Arial, sans-serif;
+$title-font-size:3rem;
+$subtitle-font-size: 1.4rem;
+@mixin mp {
+  padding: 10px;
+  margin: 10px;
+  background-color: black;
+}
+@mixin marpad-words {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  line-height: 1.8;
+
+}
