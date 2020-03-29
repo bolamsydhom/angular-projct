@@ -4,13 +4,14 @@
 @import "base/reset";
 @import "base/utilities";
 
-@import "vendors/bootstrap";
+// @import "vendors/bootstrap";
 
 @import "layout/header";
+@import "layout/footer";
 @import "layout/grid";
 
 @import "components/buttons";
-@import "components/card";
+// @import "components/card";
 @import "components/chat";
 @import "components/imagePlaceHolder";
 @import "components/intro-profile";

@@ -1,1 +1,63 @@
-<p>header works!</p>
+    <div class="containe header">
+      <div class="nav">
+        <div class="nav__brand">
+          <a routerLink="/Home">
+          <i class="fab fa-joomla fa-3x"></i>
+          </a>
+        </div>
+        <div class="nav__search">
+          <form class="nav__search__form">
+            <input class="nav__search__form__control" type="search" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+        <!-- add class active on li to be activd -->
+        <ul class="nav__menu">
+          <li class="nav__menu__item mmr-2 ">
+            <a routerLink="/Home" routerLinkActive="active">
+            <div class="nav__menu__item__icon"><i class="fas fa-home fa-lg "></i></div>
+            <div class="nav__menu__item__title">Home</div>
+            </a>
+          </li>
+          <li class="nav__menu__item mmr-2 ">
+            <a routerLink="#">
+            <div class="nav__menu__item__icon">
+              <i class="fas fa-users fa-lg"></i>
+            </div>
+            <div class="nav__menu__item__title">My Network</div>
+            </a>
+          </li>
+          <li class="nav__menu__item mmr-2">
+            <a routerLink="#">
+            <div class="nav__menu__item__icon">
+              <i class="fas fa-briefcase fa-lg"></i>
+            </div>
+            <div class="nav__menu__item__title">Jobs</div>
+            </a>
+          </li>
+          <li class="nav__menu__item mmr-2">
+            <a routerLink="#">
+            <div class="nav__menu__item__icon">
+              <i class="fas fa-envelope-open-text fa-lg"></i>
+            </div>
+            <div class="nav__menu__item__title">Messaging</div>
+            </a>
+          </li>
+          <li class="nav__menu__item mmr-4">
+            <a routerLink="#">
+            <div class="nav__menu__item__icon"><i class="fas fa-bell fa-lg"></i></div>
+            <div class="nav__menu__item__title">Notification</div>
+            </a>
+          </li>
+          <div class="vl"></div>
+          <li class="nav__menu__item mmr-2 pro ">
+            <a routerLink="/Profile/1" routerLinkActive="active">
+            <div class="nav__menu__item__icon"><i class="fas fa-user-circle fa-3x"></i></div>
+            <div class="nav__menu__item__title">ME <i class="fas fa-caret-down"></i></div>
+          </a>
+          </li>
+        </ul>
+
+
+      </div>
+    </div>
+

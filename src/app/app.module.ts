@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,17 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { SidebarComponent } from './core/sidebar/sidebar.component';
 import { ProfileComponent } from './features/profile/profile.component';
+import { NotFounrComponent } from './shared/not-founr/not-founr.component';
+
+const appRoutes: Routes = [
+  {path: 'Home', component: PostListingComponent},
+  { path: 'Profile',  children:[
+    {path: '', component: NotFounrComponent},
+    {path: ':id', component: ProfileComponent}
+
+  ] },
+
+];
 
 @NgModule({
   declarations: [
@@ -30,11 +43,14 @@ import { ProfileComponent } from './features/profile/profile.component';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    ProfileComponent
+    ProfileComponent,
+    NotFounrComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

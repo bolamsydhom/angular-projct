@@ -15,7 +15,7 @@
   padding-bottom: 1.5rem !important;
 
   &__line {
-    
+
   }
 
   &__blog-entry {
@@ -33,12 +33,12 @@
       @include marpad-words;
       font-size: $subtitle-font-size;
 
-      
+
     }
     &__blog {
       @include marpad-words;
       font-size: 15px;
-      display: -webkit-box;
+      display: block;
     }
   }
 
@@ -62,6 +62,7 @@
   }
 
   &__like-comment-icon {
+    display: flex;
     .fa {
       // color: rebeccapurple;
       margin: 0rem 2rem 0rem 3rem;
@@ -82,11 +83,11 @@ a {
 
 .comment-area {
   border-radius: 1rem;
-  
+
   // @include marpad-words;
 }
 .col-1 {
-  padding-left: 35px;
+  padding-left: 35px !important;
 }
 .c {
   height: 1rem;
