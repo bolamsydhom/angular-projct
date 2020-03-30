@@ -12,7 +12,6 @@ export class PersonService {
   person: Person[] = [
     {
       id: 1,
-<<<<<<< HEAD
       name: 'Youstina Lamie',
       imageUrl: '../../../assets/images/personal.jpg',
       imgCoverUrl:'../../assets/images/cover.PNG',
@@ -70,7 +69,7 @@ export class PersonService {
       jobTitle: 'HR Business Partner',
       country: 'Egypt',
       connections: 500,
-      about:'Responsible for 4 departments: HR, Finance, External Affairs & Strategy' 
+      about:'Responsible for 4 departments: HR, Finance, External Affairs & Strategy'
     },{
       id: 7,
       name: 'Islam Farahat',
@@ -80,7 +79,7 @@ export class PersonService {
       jobTitle: 'CEO, founder',
       country: 'Egypt',
       connections: 500,
-      about:'work on your dream until it comes real' 
+      about:'work on your dream until it comes real'
     },{
       id: 8,
       name: 'Waled Mostafa',
@@ -90,7 +89,7 @@ export class PersonService {
       jobTitle: 'Software Quality Control Engineer ',
       country: 'Egypt',
       connections: 500,
-      about:'I am a computer science graduate, who has a bachelor degree from El-Shorouk academy. I started a career in software testing to acquire experience, knowledge and skills. ' 
+      about:'I am a computer science graduate, who has a bachelor degree from El-Shorouk academy. I started a career in software testing to acquire experience, knowledge and skills. '
     },{
       id: 9,
       name: 'Tasneem Magdy',
@@ -100,7 +99,7 @@ export class PersonService {
       jobTitle: 'Hr specialist',
       country: 'Egypt',
       connections: 500,
-      about:'work on your dream until it comes real' 
+      about:'work on your dream until it comes real'
     },{
       id: 10,
       name: 'Omnia Khater',
@@ -110,18 +109,9 @@ export class PersonService {
       jobTitle: 'HR Specialist',
       country: 'Egypt',
       connections: 500,
-      about:'HR Specialist dedicated in Training and Development section highly skilled in effective communication, critical thinking and decision making. Passionate about learning new skills, working in a team' 
+      about:'HR Specialist dedicated in Training and Development section highly skilled in effective communication, critical thinking and decision making. Passionate about learning new skills, working in a team'
     }
 
-=======
-      name: 'Hamada',
-      imageUrl: './assets/user.jpg',
-      jobDesc: 'Front-End Developer worked at abc company',
-      jobTitle: 'Front-End Developer',
-      country: 'Egypt',
-      connections: 5
-    }
->>>>>>> 27acdf65f964c5cb552e8cb1e69da26438671747
   ];
 
   getAll() {
@@ -132,14 +122,11 @@ export class PersonService {
     return this.person.find(p => p.id === id);
   }
 
-<<<<<<< HEAD
   add(person: Person) {
     const p: Person = person;
     this.person.push(p);
   }
 
-=======
->>>>>>> 27acdf65f964c5cb552e8cb1e69da26438671747
   update(oldPerson: Person, newPerson: Person) {
     let index = this.person.findIndex(p => p === oldPerson);
     this.person[index] = newPerson;

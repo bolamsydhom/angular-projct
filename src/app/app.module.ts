@@ -18,10 +18,9 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { SidebarComponent } from './core/sidebar/sidebar.component';
 import { ProfileComponent } from './features/profile/profile.component';
-<<<<<<< HEAD
 import { PersonService } from './_service/person.service';
-=======
 import { NotFounrComponent } from './shared/not-founr/not-founr.component';
+
 
 const appRoutes: Routes = [
   {path: 'Home', component: PostListingComponent},
@@ -32,7 +31,6 @@ const appRoutes: Routes = [
   ] },
 
 ];
->>>>>>> 27acdf65f964c5cb552e8cb1e69da26438671747
 
 @NgModule({
   declarations: [
