@@ -17,10 +17,17 @@
       top: 20rem;
       left: 22rem;
       border: $cover-color solid 0.5rem;
-      background-image: url("./assets/images/personal.jpg");
       width: 16rem;
       height: 16rem;
       border-radius: 50%;
+      &__p {
+        top: 20rem;
+        left: 22rem;
+        width: 16rem;
+        overflow: hidden;
+        height: 16rem;
+        border-radius: 50%;
+      }
     }
     &__addbtn {
       position: relative;
@@ -139,6 +146,10 @@
         color: rgb(80, 70, 70);
         font-size: 1.6rem;
         font-style: bold;
+        &:hover {
+          text-decoration: underline;
+          color: $blue;
+        }
       }
     }
     &__uni {
@@ -223,19 +234,6 @@
       }
       &__jobtitle {
         font-size: 1.4rem;
-      }
-      &__pen {
-        position: relative;
-        bottom: 7.5rem;
-        left: 71rem;
-        border-radius: 50%;
-        width: 4rem;
-        height: 4rem;
-        padding: 1rem;
-        &:hover {
-          background-color: #e5f5fc;
-          cursor: pointer;
-        }
       }
     }
 

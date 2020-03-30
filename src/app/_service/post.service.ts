@@ -3,7 +3,7 @@ import { Post } from './../_model/post';
 
 export class PersonService {
   post: Post[] = [
-    { id: 1, body: 'Hamgfbvfbgvcgbfvcada',  jobDesc: 'Front-End Developer', jobTitle: 'Front-End Developer', country: 'Egypt', connections: 5 }
+    // { id: 1, body: 'Hamgfbvfbgvcgbfvcada',  jobDesc: 'Front-End Developer', jobTitle: 'Front-End Developer', country: 'Egypt', connections: 5 }
   ];
 
   getAll() {

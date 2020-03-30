@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
@@ -15,6 +16,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { SidebarComponent } from './core/sidebar/sidebar.component';
 import { ProfileComponent } from './features/profile/profile.component';
+import { PersonService } from './_service/person.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,7 @@ import { ProfileComponent } from './features/profile/profile.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PersonService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
