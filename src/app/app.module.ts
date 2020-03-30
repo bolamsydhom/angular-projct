@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import {FormsModule} from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,7 +18,21 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { SidebarComponent } from './core/sidebar/sidebar.component';
 import { ProfileComponent } from './features/profile/profile.component';
+<<<<<<< HEAD
 import { PersonService } from './_service/person.service';
+=======
+import { NotFounrComponent } from './shared/not-founr/not-founr.component';
+
+const appRoutes: Routes = [
+  {path: 'Home', component: PostListingComponent},
+  { path: 'Profile',  children:[
+    {path: '', component: NotFounrComponent},
+    {path: ':id', component: ProfileComponent}
+
+  ] },
+
+];
+>>>>>>> 27acdf65f964c5cb552e8cb1e69da26438671747
 
 @NgModule({
   declarations: [
@@ -32,11 +48,14 @@ import { PersonService } from './_service/person.service';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    ProfileComponent
+    ProfileComponent,
+    NotFounrComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [PersonService],
   bootstrap: [AppComponent]
