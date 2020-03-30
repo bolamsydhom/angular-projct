@@ -39,3 +39,17 @@ $subtitle-font-size: 1.4rem;
   line-height: 1.8;
 
 }
+
+$white			: #fff;
+$offwhite		: #f9f9ff;
+$black			: #222;
+$text-color		: #777777;
+
+
+
+@mixin transition($args: all 0.3s ease 0s) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+       -o-transition: $args;
+          transition: $args;
+}
