@@ -9,13 +9,17 @@ import { Post } from 'src/app/_model/post';
 })
 export class PostListingComponent implements OnInit {
   posts: Post[] = [];
+  profileNO = 1;
 
   constructor(private postservice: PostService) {}
 
   ngOnInit() {
-    if (this.posts) {
-      this.posts = this.postservice.getAll();
+    if (true) {
+      this.posts = this.postservice.getPostsByIdPerson(this.profileNO);
       console.log(this.posts);
     }
+    this.postservice.newAdded.subscribe(p => {
+      this.posts.unshift(p);
+    });
   }
 }

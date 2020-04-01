@@ -1,7 +1,9 @@
 import { Post } from './../_model/post';
+import { EventEmitter } from '@angular/core';
 
 export class PostService {
   post: Post[];
+  newAdded = new EventEmitter<Post>();
   constructor() {
     this.post = [
       {
@@ -32,7 +34,7 @@ export class PostService {
         perosnId: 1,
         likeId: 2,
         commentId: 2,
-        date: { year: '2019', month: 'June ', day: '28,' }
+        date: { year: '2019', month: 'Des ', day: '28,' }
       },
       {
         id: 3,
@@ -49,12 +51,24 @@ export class PostService {
         perosnId: 2,
         likeId: 3,
         commentId: 3,
-        date: { year: '2019', month: 'Dec ', day: '17,' }
+        date: { year: '2019', month: 'June ', day: '17,' }
+      },
+      {
+        id: 4,
+        body: `We can navigate this together! ITS Managed Services ensure business continuity through the difficult times with expert IT,Virtualization, Messaging Systems, Storage & Network solutions on a monthly, three monthly or extended basis.
+        info@its.ws for help now! At ITS, it’s a Partnership.`,
+        perosnId: 2,
+        likeId: 3,
+        commentId: 1,
+        date: { year: '2020', month: 'June ', day: '12,' }
       }
     ];
   }
   getAll(): Post[] {
     return this.post;
+  }
+  getPostsByIdPerson(id: number): Post[] {
+    return this.post.filter(p => p.perosnId === id);
   }
 
   getById(id: number): Post {
@@ -77,6 +91,6 @@ export class PostService {
 
   addPost(post: Post) {
     post.id = this.post.length + 1;
-    this.post.push(post);
+    this.post.unshift(post);
   }
 }
