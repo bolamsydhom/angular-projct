@@ -7,8 +7,11 @@
         </div>
         <div class="nav__search">
           <form class="nav__search__form">
-            <input class="nav__search__form__control" type="search" placeholder="Search" aria-label="Search">
+            <input class="nav__search__form__control" autocomplete="off" (click)="toggleDropDown()" type="search"
+              placeholder="Search" ngModel #s name="searchValue" aria-label="Search">
           </form>
+
+          <app-dropdown *ngIf="showDropDown" [(searchValue)]="s.value" (click)="toggleDropDown()"></app-dropdown>
         </div>
         <!-- add class active on li to be activd -->
         <ul class="nav__menu">

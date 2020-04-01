@@ -1,0 +1,35 @@
+.dropdown-container{
+  position: absolute;
+  z-index: 20;
+  width: 14.5%;
+  // height: 200px;
+  max-height: 300px;
+  background-color: #f5f5f5;
+  overflow-y: auto;
+
+}
+img{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  overflow: auto;
+}
+.state{
+color: #283e4a;
+font-size: 1.4rem;
+  padding: 10px;
+  border-bottom: #bac8cf 0.5px solid;
+}
+ul{
+ display: flex;
+  flex-direction: row;
+
+}
+li{
+  cursor: pointer;
+}
+
+.state:hover{
+  background-color: rgb(161, 161, 161);
+}
+.Search__name{}
