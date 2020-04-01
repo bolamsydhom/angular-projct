@@ -19,6 +19,7 @@ export class PostComponent implements OnInit {
   isSeeMore = false;
   isLiked = false;
   isCommented = false;
+  Clock: any;
   @Input()
   post: Post;
   constructor(
@@ -28,12 +29,21 @@ export class PostComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.Clock = Date.now();
     this.person = this.personService.getById(this.post.perosnId);
     console.log(this.person);
     this.comment = this.commentService.getByPostId(this.post.id);
     // console.log(this.comment);
     this.like = this.likeService.getLikeByPostId(this.post.id);
     // console.log(this.like);
+  }
+
+  calcDate() {
+    var diff = 0;
+    var days = 1000 * 60 * 60 * 24;
+    var diff = this.Clock - this.post.date;
+    return Math.floor(diff / days);
+    // return this.Clock - this.post.date;
   }
   iSgreater() {
     return this.post.body.length > 500 ? true : false;

@@ -23,7 +23,7 @@ export class PostService {
         perosnId: 1,
         likeId: 1,
         commentId: 1,
-        date: { year: '2020', month: 'July ', day: '2,' }
+        date: new Date('January 1, 2019')
       },
       {
         id: 2,
@@ -34,7 +34,7 @@ export class PostService {
         perosnId: 1,
         likeId: 2,
         commentId: 2,
-        date: { year: '2019', month: 'Des ', day: '28,' }
+        date: new Date('January 1, 2020')
       },
       {
         id: 3,
@@ -51,7 +51,7 @@ export class PostService {
         perosnId: 2,
         likeId: 3,
         commentId: 3,
-        date: { year: '2019', month: 'June ', day: '17,' }
+        date: new Date('March 1, 2019')
       },
       {
         id: 4,
@@ -60,7 +60,7 @@ export class PostService {
         perosnId: 2,
         likeId: 3,
         commentId: 1,
-        date: { year: '2020', month: 'June ', day: '12,' }
+        date: new Date('March 1, 2020')
       }
     ];
   }

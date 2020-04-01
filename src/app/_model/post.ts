@@ -1,7 +1,6 @@
 // import {Comment} from './comment';
 // import { Person } from './person';
 // import { Like } from './like';
-import { Date } from './date';
 
 export interface Post {
   id?: number;
@@ -9,5 +8,5 @@ export interface Post {
   perosnId?: number;
   likeId?: number;
   commentId?: number;
-  date?: Date;
+  date?: any;
 }

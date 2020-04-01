@@ -32,7 +32,7 @@ export class AddPostComponent implements OnInit {
       perosnId: this.profileNO,
       likeId: 100,
       commentId: 100,
-      date: { year: '2000', month: 'June ', day: '12,' }
+      date: Date.now()
     };
     this.postService.addPost(this.pAdd);
     // this.posts = this.postService.getPostsByIdPerson(this.profileNO);

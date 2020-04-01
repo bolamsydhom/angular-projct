@@ -17,9 +17,7 @@
               </a></span
             >
           </h4>
-          <h6 class="m p-0 mr-2">
-            {{ post.date.month }}{{ post.date.day }}{{ post.date.year }}
-          </h6>
+          <h6 class="m p-0 mr-2">{{ calcDate() }} day</h6>
         </div>
       </div>
 
@@ -71,7 +69,7 @@
           >
           <span class="context-menu-cursor"
             ><i class="fa fa-calendar ml-2 mr-2" aria-hidden="true"></i>
-            {{ post.date.month }}{{ post.date.day }}{{ post.date.year }}</span
+            {{ calcDate() }} day</span
           >
         </p>
       </div>
