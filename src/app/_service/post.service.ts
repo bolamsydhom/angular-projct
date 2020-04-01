@@ -3,9 +3,7 @@ import { Post } from './../_model/post';
 
 export class PostService {
   post: Post[] = [
-<<<<<<< HEAD
-    // { id: 1, body: 'Hamgfbvfbgvcgbfvcada',  jobDesc: 'Front-End Developer', jobTitle: 'Front-End Developer', country: 'Egypt', connections: 5 }
-=======
+    // { id: 1, body: 'Hamgfbvfbgvcgbfvcada',  jobDesc: 'Front-End De`veloper', jobTitle: 'Front-End Developer', country: 'Egypt', connections: 5 }
     {
       id: 1,
       body: `ut aspernatur corporis harum nihil quis provident sequi
@@ -17,7 +15,6 @@ export class PostService {
       commentId: 1,
       date: { year: '2019', month: '10', day: '5' }
     }
->>>>>>> 27acdf65f964c5cb552e8cb1e69da26438671747
   ];
 
   getAll() {

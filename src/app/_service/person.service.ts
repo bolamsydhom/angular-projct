@@ -1,18 +1,8 @@
 import { Person } from './../_model/person';
-
-// id?: number;
-//   name?: string;
-//   imageUrl?: string;
-//   jobDesc?: string;
-//   jobTitle?: string;
-//   country?: string;
-//   connections?: number;
-
 export class PersonService {
   person: Person[] = [
     {
       id: 1,
-<<<<<<< HEAD
       name: 'Youstina Lamie',
       imageUrl: '../../../assets/images/personal.jpg',
       imgCoverUrl:'../../assets/images/cover.PNG',
@@ -112,16 +102,6 @@ export class PersonService {
       connections: 500,
       about:'HR Specialist dedicated in Training and Development section highly skilled in effective communication, critical thinking and decision making. Passionate about learning new skills, working in a team' 
     }
-
-=======
-      name: 'Hamada',
-      imageUrl: './assets/user.jpg',
-      jobDesc: 'Front-End Developer worked at abc company',
-      jobTitle: 'Front-End Developer',
-      country: 'Egypt',
-      connections: 5
-    }
->>>>>>> 27acdf65f964c5cb552e8cb1e69da26438671747
   ];
 
   getAll() {
@@ -132,17 +112,20 @@ export class PersonService {
     return this.person.find(p => p.id === id);
   }
 
-<<<<<<< HEAD
   add(person: Person) {
     const p: Person = person;
     this.person.push(p);
   }
 
-=======
->>>>>>> 27acdf65f964c5cb552e8cb1e69da26438671747
-  update(oldPerson: Person, newPerson: Person) {
-    let index = this.person.findIndex(p => p === oldPerson);
-    this.person[index] = newPerson;
+  update(id:number,name:string,jobTitle:string,jobDesc:string,country:string){
+    this.person[id-1].name=name;
+    this.person[id-1].jobTitle=jobTitle;
+    this.person[id-1].jobDesc=jobDesc;
+    this.person[id-1].country=country;
+  }
+  
+  updateAbout(id:number,about:string){
+    this.person[id-1].about=about;
   }
 
   delete(person: Person) {

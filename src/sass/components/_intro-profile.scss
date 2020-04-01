@@ -14,18 +14,16 @@
     }
     &__picture {
       position: absolute;
-      top: 20rem;
+      top: 22rem;
       left: 22rem;
       border: $cover-color solid 0.5rem;
       width: 16rem;
       height: 16rem;
       border-radius: 50%;
       &__p {
-        top: 20rem;
-        left: 22rem;
-        width: 16rem;
+        width: 15rem;
+        height: 15rem;
         overflow: hidden;
-        height: 16rem;
         border-radius: 50%;
       }
     }
@@ -79,7 +77,7 @@
       font-size: 2.5rem;
       font-weight: 400;
       position: absolute;
-      top: 36rem;
+      top: 38rem;
       left: 22rem;
     }
     &__jobtitle {
@@ -87,7 +85,7 @@
       font-weight: 400;
       position: absolute;
       left: 22rem;
-      top: 39.7rem;
+      top: 41.5rem;
       font-style: bold;
       color: black;
     }
@@ -96,7 +94,7 @@
       font-weight: 400;
       position: absolute;
       left: 22rem;
-      top: 42.5rem;
+      top: 44rem;
       font-style: bold;
       color: black;
     }
@@ -105,7 +103,7 @@
       font-weight: 600;
       position: absolute;
       left: 28rem;
-      top: 42.5rem;
+      top: 44rem;
       font-style: bold;
       color: $blue;
       &:hover {
@@ -118,7 +116,7 @@
       font-weight: 600;
       position: absolute;
       left: 41rem;
-      top: 42.5rem;
+      top: 44rem;
       font-style: bold;
       color: $blue;
       &:hover {
@@ -228,6 +226,19 @@
       height: 11.5rem;
       margin: 2.5rem 0;
       padding: 2rem;
+        &__pen {
+          position: absolute;
+          bottom: 7.5rem;
+          left: 93.5rem;
+          border-radius: 50%;
+          width: 4rem;
+          height: 4rem;
+          padding: 1rem;
+          &:hover {
+            background-color: #e5f5fc;
+            cursor: pointer;
+          }
+        }
       &__title {
         font-size: 2.5rem;
         font-weight: 400;
@@ -254,7 +265,6 @@
         width: 74rem;
         height: 6.5rem;
         position: relative;
-        // bottom: 0rem;
         top: 1rem;
         padding: 1rem;
         &__txt {
