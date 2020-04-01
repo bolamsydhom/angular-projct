@@ -1,1 +1,9 @@
-<p>dropdown works!</p>
+<div class="dropdown-container">
+<div class="state" *ngFor="let item of users | searchFilter: searchValue">
+ <ul (click)="onSearchClicked(item.id)">
+   <li><img src={{item.imageUrl}} alt=""></li>
+   <li class="Search__name ml-2 mt-1">{{item.name}}</li>
+ </ul>
+
+</div>
+</div>
