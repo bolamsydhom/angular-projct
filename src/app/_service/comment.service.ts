@@ -1,77 +1,30 @@
-import { EventEmitter } from '@angular/core';
 import { Comment } from './../_model/comment';
 
 export class CommentService {
-  commentChanged = new EventEmitter<Comment[]>();
-  comments: Comment[] = [
-    {
-      id: 1,
-      body: 'eum et est occaecati',
-      postId: 1,
-      likeId: 1,
-      user: 4
-    },
-    {
-      id: 2,
-      body: 'ffffffffffffffffffff',
-      postId: 2,
-      likeId: 1,
-      user: 5
-    },
-    {
-      id: 3,
-      body: 'kkkkkkkkkkkkkkkkkkkkkk',
-      postId: 3,
-      likeId: 1,
-      user: 1
-    },
-    {
-      id: 4,
-      body: 'mmmmmmmmmmmmmmmmmmmmmmm',
-      postId: 4,
-      likeId: 1,
-      user: 3
-    },
-    {
-      id: 5,
-      body: 'ezzzzzzzzzzzzzzzzzzzzzzzzzzzz',
-      postId: 5,
-      likeId: 1,
-      user: 3
-    },
-    {
-      id: 6,
-      body: 'yyyyyyyyyyyyyyyyyyyyyyyyyyyy',
-      postId: 7,
-      likeId: 1,
-      user: 1
-    }
+  comment: Comment[] = [
+    { id: 1, body: 'eum et est occaecati', postId: 1, userId: 1, likeId: 1 },
+    { id: 2, body: 'eum et est occaecati', postId: 1, userId: 1, likeId: 1 },
+    { id: 2, body: 'eum et est occaecati', postId: 2, userId: 1, likeId: 1 }
   ];
-
   getAll() {
-    return this.comments.slice();
+    return this.comment.slice();
   }
-  getCommentByPosId(id: number): Comment[] {
-    return this.comments.filter(p => p.postId === id);
-  }
-  getById(id: number) {
-    return this.comments.find(p => p.id === id);
+
+  getByPostId(id: number): Comment[] {
+    return this.comment.filter(p => p.postId === id);
   }
 
   update(oldcomment: Comment, newcomment: Comment) {
-    const index = this.comments.findIndex(p => p === oldcomment);
-    this.comments[index] = newcomment;
+    let index = this.comment.findIndex(p => p === oldcomment);
+    this.comment[index] = newcomment;
   }
 
   delete(comment: Comment) {
-    const index = this.comments.findIndex(p => p === comment);
-    this.comments.splice(index, 1);
+    let index = this.comment.findIndex(p => p === comment);
+    this.comment.splice(index, 1);
   }
-
-  add(comment: Comment) {
-    comment.id = this.comments.length + 1;
-    this.comments.push(comment);
-    // this.comments.unshift(comment);
-    this.commentChanged.emit(this.comments.slice());
+  addComment(comment: Comment) {
+    comment.id = this.comment.length + 1;
+    this.comment.push(comment);
   }
 }

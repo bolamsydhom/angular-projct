@@ -30,7 +30,7 @@ export class PostComponent implements OnInit {
   ngOnInit() {
     this.person = this.personService.getById(this.post.perosnId);
     console.log(this.person);
-    this.comment = this.commentService.getCommentByPosId(this.post.id);
+    this.comment = this.commentService.getByPostId(this.post.id);
     console.log(this.comment);
     this.like = this.likeService.getLikeByPostId(this.post.id);
     console.log(this.like);
@@ -57,7 +57,7 @@ export class PostComponent implements OnInit {
   commentAdded() {
     this.isCommented = !this.isCommented;
     if (this.isCommented) {
-      this.commentService.add({});
+      this.commentService.addComment({});
       this.comment.length++;
     } else {
       this.comment.length--;
