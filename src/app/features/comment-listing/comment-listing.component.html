@@ -1,1 +1,7 @@
-<p>comment-listing works!</p>
+<div *ngIf="comments.length >= 0">
+  <app-comment
+    (onCommentAdd)="onCommentAdded($event)"
+    *ngFor="let item of comments"
+    [comment]="item"
+  ></app-comment>
+</div>

@@ -56,3 +56,4 @@ export class ProfileComponent implements OnInit {
     this.personService.updateAbout(personID, about);
   }
 }
+

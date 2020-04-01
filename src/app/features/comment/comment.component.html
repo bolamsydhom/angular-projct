@@ -1,1 +1,22 @@
-<p>comment works!</p>
+<form class="postContainer__form ">
+  <div class="row align-items-end">
+    <div class="col-1">
+      <a href="#" class="postContainer__img postContainer__img__comment "></a>
+      <!-- [style.backgroundImage]="'url(' + comment.user.imageUrl + ')'" -->
+    </div>
+
+    <div class="form-group col old-comment">
+      <div class="userComment">{{ comment.user }}</div>
+      {{ comment.body }}
+    </div>
+    <div class="col-1">
+      <i
+        class="far fa-thumbs-up  faa fa-2x "
+        (click)="likeEvent()"
+        [ngClass]="status ? 'liked' : ''"
+      >
+      </i>
+      <div class="c"></div>
+    </div>
+  </div>
+</form>

@@ -1,6 +1,7 @@
 .PostsArea {
-  width: 100%;
+  width: 50%;
 }
+
 .postContainer {
   box-shadow: 2px 5px 15px 5px #efe6e6;
   position: relative;
@@ -15,16 +16,18 @@
   padding-bottom: 1.5rem !important;
 
   &__line {
-
   }
 
   &__blog-entry {
     display: flex;
   }
+
   &__text {
     width: calc(100% - 150px);
     padding-left: 1.5rem !important;
+
     &__title {
+      display: flex;
       font-size: $title-font-size;
       line-height: 1.5;
     }
@@ -32,13 +35,13 @@
     &__details {
       @include marpad-words;
       font-size: $subtitle-font-size;
-
-
     }
+
     &__blog {
       @include marpad-words;
       font-size: 15px;
       display: block;
+      text-align: justify;
     }
   }
 
@@ -63,16 +66,18 @@
 
   &__like-comment-icon {
     display: flex;
+
     .fa {
       // color: rebeccapurple;
       margin: 0rem 2rem 0rem 3rem;
     }
   }
-  &__like-details{
+
+  &__like-details {
     margin: 0rem 2rem 0rem 3rem;
 
     // background-color: rgb(158, 146, 170);
-    font-size: 1.2rem ;
+    font-size: 1.2rem;
     // span{margin: .5rem ;}
   }
 }
@@ -86,23 +91,37 @@ a {
 
   // @include marpad-words;
 }
+
 .col-1 {
   padding-left: 35px !important;
 }
+
 .c {
   height: 1rem;
 }
+
 .fa {
   cursor: pointer;
 }
+
 .old-comment {
   font-size: 1.2rem;
   background-color: rgba(rebeccapurple, 0.2);
   border-radius: 0rem 1rem 1rem 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   padding-left: 1.5rem;
-
 }
-.context-menu-cursor{
- cursor: context-menu;
+
+.context-menu-cursor {
+  cursor: context-menu;
+}
+.userComment {
+  font-size: 1.5rem;
+  cursor: pointer;
+  font: message-box;
+}
+.liked {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: rgb(37, 26, 190);
 }

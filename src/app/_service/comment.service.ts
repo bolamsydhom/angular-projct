@@ -1,26 +1,77 @@
+import { EventEmitter } from '@angular/core';
 import { Comment } from './../_model/comment';
 
 export class CommentService {
-  comment: Comment[] = [
-    { id: 1, body: 'eum et est occaecati', postId: 1, likeId: 1 }
+  commentChanged = new EventEmitter<Comment[]>();
+  comments: Comment[] = [
+    {
+      id: 1,
+      body: 'eum et est occaecati',
+      postId: 1,
+      likeId: 1,
+      user: 4
+    },
+    {
+      id: 2,
+      body: 'ffffffffffffffffffff',
+      postId: 2,
+      likeId: 1,
+      user: 5
+    },
+    {
+      id: 3,
+      body: 'kkkkkkkkkkkkkkkkkkkkkk',
+      postId: 3,
+      likeId: 1,
+      user: 1
+    },
+    {
+      id: 4,
+      body: 'mmmmmmmmmmmmmmmmmmmmmmm',
+      postId: 4,
+      likeId: 1,
+      user: 3
+    },
+    {
+      id: 5,
+      body: 'ezzzzzzzzzzzzzzzzzzzzzzzzzzzz',
+      postId: 5,
+      likeId: 1,
+      user: 3
+    },
+    {
+      id: 6,
+      body: 'yyyyyyyyyyyyyyyyyyyyyyyyyyyy',
+      postId: 7,
+      likeId: 1,
+      user: 1
+    }
   ];
-  getAll() {
-    return this.comment.slice();
-  }
 
+  getAll() {
+    return this.comments.slice();
+  }
+  getCommentByPosId(id: number): Comment[] {
+    return this.comments.filter(p => p.postId === id);
+  }
   getById(id: number) {
-    return this.comment.find(p => p.id === id);
+    return this.comments.find(p => p.id === id);
   }
 
   update(oldcomment: Comment, newcomment: Comment) {
-    let index = this.comment.findIndex(p => p === oldcomment);
-    this.comment[index] = newcomment;
+    const index = this.comments.findIndex(p => p === oldcomment);
+    this.comments[index] = newcomment;
   }
 
   delete(comment: Comment) {
-    let index = this.comment.findIndex(p => p === comment);
-    this.comment.splice(index, 1);
+    const index = this.comments.findIndex(p => p === comment);
+    this.comments.splice(index, 1);
   }
 
-  addComment() {}
+  add(comment: Comment) {
+    comment.id = this.comments.length + 1;
+    this.comments.push(comment);
+    // this.comments.unshift(comment);
+    this.commentChanged.emit(this.comments.slice());
+  }
 }
