@@ -15,8 +15,8 @@
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
 
-
-  &__line {}
+  &__line {
+  }
 
   &__blog-entry {
     display: flex;
@@ -35,8 +35,6 @@
     &__details {
       @include marpad-words;
       font-size: $subtitle-font-size;
-
-
     }
 
     &__blog {
@@ -63,7 +61,8 @@
     }
   }
 
-  &__form {}
+  &__form {
+  }
 
   &__like-comment-icon {
     display: flex;
@@ -109,11 +108,20 @@ a {
   font-size: 1.2rem;
   background-color: rgba(rebeccapurple, 0.2);
   border-radius: 0rem 1rem 1rem 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   padding-left: 1.5rem;
-
 }
 
 .context-menu-cursor {
   cursor: context-menu;
+}
+.userComment {
+  font-size: 1.5rem;
+  cursor: pointer;
+  font: message-box;
+}
+.liked {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: rgb(37, 26, 190);
 }

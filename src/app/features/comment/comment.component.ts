@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { Comment } from './../../_model/comment';
+import { CommentService } from 'src/app/_service/comment.service';
 
 @Component({
   selector: 'app-comment',
@@ -6,10 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comment.component.scss']
 })
 export class CommentComponent implements OnInit {
+  // fa = false;
+  @Input()
+  comment: Comment = {};
+  // @Input() userid: number;
 
-  constructor() { }
+  constructor(private commentService: CommentService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    // this.comment = this.commentService.getById(this.userid);
+    // console.log(this.comment.body);
   }
+  // getComment() {
+  //   if (this.comment.postId === 1) {
+  //     return this.comment;
+  //   }
+  // }
 
+  status: boolean = false;
+  likeEvent() {
+    this.status = !this.status;
+  }
 }
