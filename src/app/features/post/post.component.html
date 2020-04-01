@@ -1,0 +1,105 @@
+<div class="postContainer">
+  <div class="postContainer__blog-entry">
+    <div class="postContainer__text">
+      <div class="postContainer__text__title">
+        <img
+          [src]="person.imageUrl"
+          alt="ava-ava"
+          class="avatar avatar--post mr-3"
+        />
+        <div>
+          <h3 class="m-0 p-0">{{ person.name }}</h3>
+          <h4 class="m-0 p-0">
+            <span
+              ><a href="#"
+                ><i class="fa fa-briefcase  mr-2" aria-hidden="true"></i
+                >{{ person.jobTitle }}
+              </a></span
+            >
+          </h4>
+          <h6 class="m p-0 mr-2">
+            {{ post.date.month }}{{ post.date.day }}{{ post.date.year }}
+          </h6>
+        </div>
+      </div>
+
+      <p class="postContainer__text__blog">
+        {{ Trim() }}
+        <a *ngIf="iSgreater()" (click)="seeMore()">
+          <span [hidden]="isSeeMore">....see more</span>
+        </a>
+        <a *ngIf="isSeeMore">
+          {{ post.body }}
+        </a>
+      </p>
+    </div>
+  </div>
+  <div class="postContainer__like-details context-menu-cursor">
+    <!-- number of likes -->
+    <span>{{ like.length }} like</span>
+    <span> . </span>
+    <span>{{ comment.length }} comment</span>
+  </div>
+  <hr class="postContainer__line" />
+  <!-- like and comment icons  -->
+  <div class="postContainer__like-comment-icon">
+    <i class="far fa-thumbs-up  fa " (click)="likeAdded()">
+      Like
+    </i>
+    <i class="far fa-comment-dots fa" (click)="commentAdded()"> Comment </i>
+  </div>
+  <hr class="postContainer__line" />
+</div>
+
+<!-- <div class="postContainer__blog-entry">
+    <a
+      href="#"
+      class="postContainer__img"
+      [style.backgroundImage]="'url(' + person.imageUrl + ')'"
+    ></a>
+    <div class="postContainer__text">
+      <h3 class="postContainer__text__title">
+        <a href="#">{{ person.name }}</a>
+      </h3>
+      <div class="postContainer__text__details">
+        <p class="meta">
+          <span
+            ><a href="#"
+              ><i class="fa fa-briefcase  mr-2" aria-hidden="true"></i
+              >{{ person.jobTitle }}</a
+            ></span
+          >
+          <span class="context-menu-cursor"
+            ><i class="fa fa-calendar ml-2 mr-2" aria-hidden="true"></i>
+            {{ post.date.month }}{{ post.date.day }}{{ post.date.year }}</span
+          >
+        </p>
+      </div>
+      <p class="postContainer__text__blog">
+        {{ Trim() }}
+        <a *ngIf="iSgreater()" (click)="seeMore()">
+          <span [hidden]="isSeeMore">....see more</span>
+        </a>
+        <a *ngIf="isSeeMore">
+          {{ post.body }}
+        </a>
+      </p>
+    </div>
+  </div>
+  <div class="postContainer__like-details context-menu-cursor">
+  
+    <span>10 like</span>
+    <span> | </span>
+    <span>2 comment</span>
+  </div>
+  <hr class="postContainer__line" />
+  
+  <div class="postContainer__like-comment-icon">
+    <i class="far fa-thumbs-up  faa fa-2x"> Like </i>
+    <i class="far fa-comment-dots faa fa-2x "> Comment </i>
+  </div>
+  <hr class="postContainer__line" /> -->
+
+<!-- <p class="postContainer__text__blog">
+    {{ post.body | summary }}
+  </p> -->

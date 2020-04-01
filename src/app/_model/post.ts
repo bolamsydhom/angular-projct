@@ -6,8 +6,8 @@ import { Date } from './date';
 export interface Post {
   id?: number;
   body?: string;
-  perosnId: number;
-  likeId: number;
-  commentId: number;
+  perosnId?: number;
+  likeId?: number;
+  commentId?: number;
   date?: Date;
 }

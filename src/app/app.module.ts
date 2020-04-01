@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {FormsModule} from '@angular/forms';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +21,9 @@ import { PersonService } from './_service/person.service';
 import { NotFounrComponent } from './shared/not-founr/not-founr.component';
 import { OthersComponent } from './features/others/others.component';
 import {SearchFilterPipe} from './_service/filter-pipe';
+import { PostService } from './_service/post.service';
+import { CommentService } from './_service/comment.service';
+import { LikeService } from './_service/like.service';
 
 const appRoutes: Routes = [
 
@@ -43,8 +45,10 @@ const appRoutes: Routes = [
 
     ]
   }
-
 ];
+
+
+
 
 @NgModule({
   declarations: [
@@ -71,7 +75,7 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [PersonService],
+  providers: [PostService, PersonService, CommentService, LikeService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

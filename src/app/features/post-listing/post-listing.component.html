@@ -1,1 +1,4 @@
-<p>post-listing works!</p>
+<div class="PostsArea container">
+  <app-add-post [profileNO]="profileNO"></app-add-post>
+  <app-post *ngFor="let p of posts" [post]="p"></app-post>
+</div>
