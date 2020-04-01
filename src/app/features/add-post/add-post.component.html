@@ -1,17 +1,39 @@
-<<<<<<< HEAD
-=======
-<section class="new-post panel panel-default">
-
-  <section class="panel-body">
-    <form action="" class="post-form">
-
-      <div class="form-group">
-        <label class="control-label string required" for="post_caption"><abbr title="required">*</abbr> What do you think of now ..</label>
-        <textarea class="form-control string required" rows="3" required="required" aria-required="true" type="text"
-          name="post[caption]" id="post_caption"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary btn-lg btn-block">Post</button>
-    </form>
+<div class="postContainer">
+  <section class="new-post panel panel-default">
+    <section class="panel-body">
+      <form action="" class="post-form">
+        <div class="form-group">
+          <!-- <label class="control-label string required" for="post_caption"
+            ><abbr title="required">*</abbr> What do you think of now ..</label
+          > -->
+          <textarea
+            placeholder="What do you think of now ..."
+            class="form-control string required"
+            rows="3"
+            required="required"
+            aria-required="true"
+            type="text"
+            name="post[caption]"
+            id="post_caption"
+            [(ngModel)]="myPost"
+            required
+          >
+          </textarea>
+          <!-- #myTextarea="ngModel" -->
+        </div>
+        <button
+          (click)="setValue()"
+          type="submit"
+          class="btn btn-primary btn-lg btn-block"
+        >
+          Post
+        </button>
+      </form>
+    </section>
   </section>
-</section>
->>>>>>> 27acdf65f964c5cb552e8cb1e69da26438671747
+</div>
+
+<!--
+.btnCol {
+  background-color: lighten($color: blue, $amount:70%);
+} -->

@@ -31,9 +31,9 @@ export class PostComponent implements OnInit {
     this.person = this.personService.getById(this.post.perosnId);
     console.log(this.person);
     this.comment = this.commentService.getByPostId(this.post.id);
-    console.log(this.comment);
+    // console.log(this.comment);
     this.like = this.likeService.getLikeByPostId(this.post.id);
-    console.log(this.like);
+    // console.log(this.like);
   }
   iSgreater() {
     return this.post.body.length > 500 ? true : false;

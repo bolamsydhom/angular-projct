@@ -19,20 +19,36 @@ import { SidebarComponent } from './core/sidebar/sidebar.component';
 import { ProfileComponent } from './features/profile/profile.component';
 import { PersonService } from './_service/person.service';
 import { NotFounrComponent } from './shared/not-founr/not-founr.component';
+import { OthersComponent } from './features/others/others.component';
+import {SearchFilterPipe} from './_service/filter-pipe';
 import { PostService } from './_service/post.service';
 import { CommentService } from './_service/comment.service';
 import { LikeService } from './_service/like.service';
 
 const appRoutes: Routes = [
-  { path: 'Home', component: PostListingComponent },
+
   {
-    path: 'Profile',
-    children: [
+    path: 'Home', children: [
       { path: '', component: NotFounrComponent },
-      { path: ':id', component: ProfileComponent }
+      { path: ':id', component: PostListingComponent }
+
+    ]
+  },
+  { path: 'Profile',  children:[
+    {path: '', component: NotFounrComponent},
+    {path: ':id', component: ProfileComponent}
+
+  ] },
+  {
+    path: 'others', children: [
+      { path: ':id', component: OthersComponent }
+
     ]
   }
 ];
+
+
+
 
 @NgModule({
   declarations: [
@@ -49,7 +65,9 @@ const appRoutes: Routes = [
     FooterComponent,
     SidebarComponent,
     ProfileComponent,
-    NotFounrComponent
+    NotFounrComponent,
+    OthersComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
