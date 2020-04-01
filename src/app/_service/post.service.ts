@@ -8,7 +8,7 @@ export class PostService {
     this.post = [
       {
         id: 1,
-        body: `Streamlined overall programme management functions and accomplished 
+        body: `Streamlined overall m programme management functions and accomplished 
         desired goals by controlling cost, utilising resources, motivating teams,
          implementing best practices, and conducting risk analysis.
         Delivered both Hermes iPad and Hermes iPhone native trading 
