@@ -2,9 +2,8 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { Comment } from './../../_model/comment';
 import { CommentService } from 'src/app/_service/comment.service';
 import { NgForm } from '@angular/forms';
-import { Post } from 'src/app/_model/post';
 import { PostService } from 'src/app/_service/post.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-comment',
@@ -15,14 +14,16 @@ export class AddCommentComponent implements OnInit {
   comment: Comment = {};
   // post: Post;
   // @Input() postID: number;
+  id: number;
 
   constructor(
-    private router: Router,
     private commentService: CommentService,
-    private postService: PostService
+    private postService: PostService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
+    this.id = this.route.snapshot.params.id;
     // this.post = this.postService.getById(this.postID);
   }
 
@@ -33,7 +34,7 @@ export class AddCommentComponent implements OnInit {
       body: commentValue,
       postId: 2,
       likeId: 1,
-      user: 5
+      user: this.id
     };
 
     console.log(newcomment);
