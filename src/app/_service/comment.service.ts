@@ -21,28 +21,28 @@ export class CommentService {
     {
       id: 3,
       body: 'kkkkkkkkkkkkkkkkkkkkkk',
-      postId: 3,
+      postId: 1,
       likeId: 1,
       user: 1
     },
     {
       id: 4,
       body: 'mmmmmmmmmmmmmmmmmmmmmmm',
-      postId: 4,
+      postId: 2,
       likeId: 1,
       user: 3
     },
     {
       id: 5,
       body: 'ezzzzzzzzzzzzzzzzzzzzzzzzzzzz',
-      postId: 5,
+      postId: 1,
       likeId: 1,
       user: 3
     },
     {
       id: 6,
       body: 'yyyyyyyyyyyyyyyyyyyyyyyyyyyy',
-      postId: 7,
+      postId: 2,
       likeId: 1,
       user: 1
     }
@@ -52,7 +52,7 @@ export class CommentService {
     return this.comments.slice();
   }
   getCommentByPosId(id: number): Comment[] {
-    return this.comments.filter(p => p.postId === id);
+    return this.comments.filter(p => p.postId == id);
   }
   getById(id: number) {
     return this.comments.find(p => p.id === id);

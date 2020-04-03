@@ -42,7 +42,8 @@ const appRoutes: Routes = [
       { path: ':id', component: OthersComponent }
 
     ]
-  }
+  },
+  { path: '**', component: NotFounrComponent }
 ];
 
 

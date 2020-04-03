@@ -6,6 +6,7 @@
         href="#"
         class="postContainer__img postContainer__img__comment "
         style="background-image: url(../assets/images/personal-img.png);"
+        [ngStyle]="{'background-image': 'url(' + person.imageUrl + ')'}"
       ></a>
     </div>
     <div class="form-group col">

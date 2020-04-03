@@ -14,6 +14,8 @@ export class CommentComponent implements OnInit {
   // fa = false;
   @Input()
   comment: Comment = {};
+  commentedPerson: Person;
+  @Input() PostId;
   // @Input() userid: number;
   id: number;
   person: Person = {};
@@ -21,13 +23,14 @@ export class CommentComponent implements OnInit {
     private route: ActivatedRoute,
     private commentService: CommentService,
     private personService: PersonService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.id = parseInt(this.route.snapshot.params.id);
-    console.log(this.route.snapshot.params.id);
+    // console.log(this.route.snapshot.params.id);
     this.person = this.personService.getById(this.id);
-    console.log(this.person);
+    console.log(this.PostId);
+    this.commentedPerson = this.personService.getById(this.comment.user);
   }
 
   // id: number;

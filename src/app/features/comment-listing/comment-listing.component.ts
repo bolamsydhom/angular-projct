@@ -11,19 +11,23 @@ import { Post } from './../../_model/post';
 export class CommentListingComponent implements OnInit {
   @Output()
   comments: Comment[];
-
-  constructor(private commentService: CommentService) {}
+  @Input() postID;
+  constructor(private commentService: CommentService) { }
 
   ngOnInit() {
-    this.comments = this.commentService.getCommentByPosId(2);
+    this.comments = this.commentService.getCommentByPosId(this.postID);
+    console.log(this.comments);
     this.commentService.commentChanged.subscribe((comments: Comment[]) => {
-      this.comments = comments;
+      this.comments = this.commentService.getCommentByPosId(this.postID);
     });
   }
 
   // tslint:disable-next-line: use-lifecycle-interface
   ngOnChanges(changes: SimpleChanges) {
     // changes.prop contains the old and the new value...
+    this.comments = this.commentService.getCommentByPosId(this.postID);
+    console.log(this.comments);
+
   }
   // ispost: boolean = false;
 

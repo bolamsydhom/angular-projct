@@ -1,5 +1,5 @@
 <div *ngIf="comments.length >= 0">
-  <app-comment
+  <app-comment [PostId]="postID"
     (onCommentAdd)="onCommentAdded($event)"
     *ngFor="let item of comments"
     [comment]="item"

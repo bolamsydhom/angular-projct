@@ -12,6 +12,7 @@
   width: 26.5rem;
   height: 4.8rem;
   color: white;
+  z-index: 3;
   &:hover {
     background-color: $secondry-color;
     cursor: pointer;

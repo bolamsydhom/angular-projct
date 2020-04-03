@@ -3,6 +3,7 @@ import { PostService } from './../../_service/post.service';
 import { PersonService } from 'src/app/_service/person.service';
 import { Person } from 'src/app/_model/person';
 import { Post } from 'src/app/_model/post';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-add-post',
@@ -13,23 +14,31 @@ export class AddPostComponent implements OnInit {
   myPost: string = '';
   person: Person;
   // posts: Post[] = [];
+  id: number;
+  validPerson = false;
   pAdd: Post;
   @Input()
   profileNO: number;
 
   constructor(
     private personService: PersonService,
-    private postService: PostService
+    private postService: PostService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
-    this.person = this.personService.getById(this.profileNO);
+    this.route.params.subscribe((params: Params) => {
+      this.id = +params['id'];
+      this.validPerson = params['id'] != null;
+    });
+
+    this.person = this.personService.getById(this.id);
     console.log(this.person);
   }
   setValue() {
     this.pAdd = {
       body: this.myPost,
-      perosnId: this.profileNO,
+      perosnId: this.id,
       likeId: 100,
       commentId: 100,
       date: Date.now()

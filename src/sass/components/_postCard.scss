@@ -53,6 +53,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: auto;
 
     &__comment {
       height: 4rem;

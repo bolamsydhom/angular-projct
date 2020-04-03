@@ -15,7 +15,7 @@ export class PersonService {
     {
       id: 2,
       name: 'Youstina Nader',
-      imageUrl: '../../../assets/images/personal.jpg',
+      imageUrl: '../../../assets/images/girl2.jpg',
       imgCoverUrl: '../../assets/images/cover.PNG',
       jobDesc: 'Information Technology Institude (ITI)',
       jobTitle: 'Trainee',
@@ -26,7 +26,7 @@ export class PersonService {
     {
       id: 3,
       name: 'Bola Sydhom',
-      imageUrl: '../../../assets/images/personal.jpg',
+      imageUrl: '../../../assets/images/boy.jpg',
       imgCoverUrl: '../../assets/images/cover.PNG',
       jobDesc: 'Information Technology Institute (ITI)',
       jobTitle: 'Web & UI Trainee',
@@ -38,7 +38,7 @@ export class PersonService {
     {
       id: 4,
       name: 'Sharl Hanna',
-      imageUrl: '../../../assets/images/personal.jpg',
+      imageUrl: '../../../assets/images/boy.jpg',
       imgCoverUrl: '../../assets/images/cover.PNG',
       jobDesc: 'Information Technology Institute (ITI)',
       jobTitle: 'Training Management',
@@ -50,7 +50,7 @@ export class PersonService {
     {
       id: 5,
       name: 'Ahmed Adel Domairy',
-      imageUrl: '../../../assets/images/personal.jpg',
+      imageUrl: '../../../assets/images/ElDomery.png',
       imgCoverUrl: '../../assets/images/cover.PNG',
       jobDesc: 'Information Technology Institute (ITI)',
       jobTitle: 'CTO',
