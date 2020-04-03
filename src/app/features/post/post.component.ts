@@ -14,7 +14,7 @@ import { Comment } from './../../_model/comment';
 })
 export class PostComponent implements OnInit {
   person: Person;
-  comment: Comment[] = [];
+  comment: Comment[] ;
   like: Like[] = [];
   isSeeMore = false;
   isLiked = false;
@@ -33,7 +33,10 @@ export class PostComponent implements OnInit {
     this.person = this.personService.getById(this.post.perosnId);
     console.log(this.person);
     this.comment = this.commentService.getCommentByPosId(this.post.id);
-    // console.log(this.comment);
+    console.log(this.comment);
+    this.commentService.commentChanged.subscribe((comment: Comment[]) => {
+      this.comment = this.commentService.getCommentByPosId(this.post.id);
+    });
     this.like = this.likeService.getLikeByPostId(this.post.id);
     // console.log(this.like);
   }
